@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Archive</title>
+    <link rel="shortcut icon" href="book.png" type="image/x-icon" />
+    <!-- custom style -->
+    <style>
+      #spinner {
+        position: relative;
+        top: 140px;
+      }
+      @media only screen and (max-width: 688px) {
+        #searchPart {
+          width: 80% !important;
+        }
+      }
+    </style>
+    <!-- bootstrap stylesheet -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark">
+    <!-- header start -->
+
+    <header>
+      <h1 class="text-center text-white mt-3">
+        &#x2728;Collection of books&#x2728;
+      </h1>
+    </header>
+
+    <!-- header end  -->
+
+    <!-- search section -->
+
+    <section>
+      <form id="searchPart" class="d-flex mx-auto mt-4 w-50">
+        <input
+          id="search-field"
+          class="form-control me-2"
+          type="search"
+          placeholder="search you favorite book"
+          aria-label="Search"
+        />
+        <button id="search-btn" class="btn btn-primary" type="submit">
+          Search
+        </button>
+      </form>
+      <!-- search results message -->
+      <p class="text-white w-50 mx-auto" id="search-results"></p>
+    </section>
+
+    <!-- search section end -->
+
+    <!-- spinner section  -->
+
+    <section id="spinner" class="d-flex justify-content-center d-none">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </section>
+
+    <!-- spinner section end -->
+
+    <!-- books container -->
+
+    <section>
+      <div
+        id="books"
+        class="
+          row row-cols-1 row-cols-md-2 row-cols-lg-3
+          container
+          mx-auto
+          my-4
+          g-4
+        "
+      ></div>
+    </section>
+
+    <!-- books container end -->
+
+    <!-- custom js -->
+    <script src="js/app.js"></script>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
